@@ -18,7 +18,7 @@ class RequestHandler(BaseHTTPRequestHandler):
         self.send_header("Content-Type", "text/html")
         self.send_header("Content-Length", str(len(self.Page)))
         self.end_headers()
-        self.wfile.write(self.Page)
+        self.wfile.write(self.Page.encode('utf-8'))
 
 #----------------------------------------------------------------------
 
